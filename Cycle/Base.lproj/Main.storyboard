@@ -16,11 +16,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdf-ZK-Brg" customClass="ClockView" customModule="Cycle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.46529942460000001" green="0.80372627620000003" blue="0.4131512128" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xdf-ZK-Brg" secondAttribute="trailing" id="M6a-UR-DKD"/>
+                            <constraint firstItem="Xdf-ZK-Brg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dgC-ET-Lut"/>
+                            <constraint firstItem="Xdf-ZK-Brg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="emr-bI-Cgs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xdf-ZK-Brg" secondAttribute="bottom" id="vGv-bZ-QwA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clockView" destination="Xdf-ZK-Brg" id="avG-DV-nso"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="360" y="364"/>
         </scene>
     </scenes>
 </document>
