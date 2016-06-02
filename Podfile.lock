@@ -18,14 +18,19 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (3.2.0):
     - PromiseKit/CorePromise
+  - Realm (1.0.0):
+    - Realm/Headers (= 1.0.0)
+  - Realm/Headers (1.0.0)
 
 DEPENDENCIES:
-  - PromiseKit
+  - PromiseKit (~> 3.2)
+  - Realm (~> 1.0)
 
 SPEC CHECKSUMS:
   OMGHTTPURLRQ: 38316b56d88125c600bcdb16df8329147da2b0ee
   PromiseKit: 1db024241265f428137a9f3c00ff9590740c4be6
+  Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
 
-PODFILE CHECKSUM: 191351433a4b8762c4249fbde97e4aa162c0ff0d
+PODFILE CHECKSUM: 3b02ef23270386a3489dabe995791fb49075fa0b
 
 COCOAPODS: 1.0.0

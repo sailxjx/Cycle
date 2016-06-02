@@ -6,7 +6,8 @@ target 'Cycle' do
   use_frameworks!
 
   # Pods for Cycle
-  pod 'PromiseKit'
+  pod 'PromiseKit', '~> 3.2'
+  pod 'Realm', '~> 1.0'
 
   target 'CycleTests' do
     inherit! :search_paths
