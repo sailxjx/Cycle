@@ -10,11 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-  @IBOutlet weak var clockView: ClockView!
-
   override func viewDidLoad() {
     super.viewDidLoad()
-    clockView.backgroundColor = .None
   }
 
   override func didReceiveMemoryWarning() {
