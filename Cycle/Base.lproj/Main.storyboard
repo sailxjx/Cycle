@@ -38,15 +38,34 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edr-Y5-wFw" customClass="CheckinButton" customModule="Cycle" customModuleProvider="target">
-                                        <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                        <state key="normal" title="Checkin"/>
+                                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edr-Y5-wFw">
+                                        <rect key="frame" x="210" y="210" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="EZA-C1-2FU"/>
+                                            <constraint firstAttribute="height" constant="180" id="yJl-0w-TZu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                        <state key="normal" title="42">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Do something" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-BE-wHt" userLabel="Behavior Title">
+                                        <rect key="frame" x="180" y="90" width="240" height="70"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.82352941176470584" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="RIH-BE-wHt" firstAttribute="centerX" secondItem="pou-zG-0bh" secondAttribute="centerX" id="W2a-b6-Q6p"/>
+                                    <constraint firstItem="Xdf-ZK-Brg" firstAttribute="top" secondItem="RIH-BE-wHt" secondAttribute="bottom" constant="20" id="apl-YQ-Klg"/>
+                                    <constraint firstItem="RIH-BE-wHt" firstAttribute="width" secondItem="Xdf-ZK-Brg" secondAttribute="width" id="cDz-SW-THd"/>
                                     <constraint firstItem="Xdf-ZK-Brg" firstAttribute="centerY" secondItem="pou-zG-0bh" secondAttribute="centerY" id="hxi-i5-WUa"/>
+                                    <constraint firstItem="edr-Y5-wFw" firstAttribute="centerX" secondItem="Xdf-ZK-Brg" secondAttribute="centerX" id="jui-3z-aHw"/>
                                     <constraint firstItem="Xdf-ZK-Brg" firstAttribute="centerX" secondItem="pou-zG-0bh" secondAttribute="centerX" id="tax-Bg-NWQ"/>
+                                    <constraint firstItem="edr-Y5-wFw" firstAttribute="centerY" secondItem="Xdf-ZK-Brg" secondAttribute="centerY" id="zG1-8m-0ha"/>
+                                    <constraint firstItem="RIH-BE-wHt" firstAttribute="top" secondItem="pou-zG-0bh" secondAttribute="top" constant="90" id="zg0-am-U2N"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -71,10 +90,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="checkinButton" destination="edr-Y5-wFw" id="Yjn-ZF-GhY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360" y="364"/>
+            <point key="canvasLocation" x="264" y="270"/>
         </scene>
     </scenes>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class BGView: UIView {
+class BGView: UIView {
 
   @IBInspectable var startColor: UIColor = UIColor.whiteColor()
   @IBInspectable var endColor: UIColor = UIColor.whiteColor()
@@ -29,6 +29,7 @@ import UIKit
                                 startPoint,
                                 endPoint,
                                 [])
+    CGContextSaveGState(context)
   }
 
 }

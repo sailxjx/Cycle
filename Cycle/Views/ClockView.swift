@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class ClockView: UIView {
+class ClockView: UIView {
 
   @IBInspectable var borderColor: UIColor = UIColor.orangeColor()
   @IBInspectable var shadowColor: UIColor = UIColor.whiteColor()
