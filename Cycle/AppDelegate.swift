@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+    let config = Realm.Configuration(
+      schemaVersion: 2,
+      migrationBlock: { migration, oldSchemaVersion in
+      }
+    )
+    Realm.Configuration.defaultConfiguration = config
+    print(Realm.Configuration.defaultConfiguration.fileURL)
     return true
   }
 
