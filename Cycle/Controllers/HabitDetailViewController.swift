@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HabitDetailViewController: UITableViewController {
+
+  var habit: Habit!
+  @IBOutlet weak var habitNameTextField: UITextField!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -16,6 +20,18 @@ class HabitDetailViewController: UITableViewController {
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "saveHabit" {
+      let realm = try! Realm()
+      try! realm.write() {
+        let habit = Habit()
+        habit.name = habitNameTextField.text!
+        realm.add(habit)
+        self.habit = habit
+      }
+    }
   }
 
 }

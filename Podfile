@@ -7,7 +7,7 @@ target 'Cycle' do
 
   # Pods for Cycle
   pod 'PromiseKit', '~> 3.2'
-  pod 'Realm', '~> 1.0'
+  pod 'RealmSwift', '~> 1.0'
   pod 'Material'
 
   target 'CycleTests' do

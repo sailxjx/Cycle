@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Material
 
 class ViewController: UIViewController {
 
   @IBOutlet weak var checkinButton: UIButton!
+  @IBOutlet weak var habitNameTextView: UITextView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,7 +27,9 @@ class ViewController: UIViewController {
   }
 
   @IBAction func saveHabitAndReturnToMainViewController(segue: UIStoryboardSegue) {
-
+    if let habitDetailViewController = segue.sourceViewController as? HabitDetailViewController {
+      habitNameTextView.text = habitDetailViewController.habit.name
+    }
   }
 
 }
