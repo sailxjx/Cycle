@@ -8,7 +8,6 @@ target 'Cycle' do
   # Pods for Cycle
   pod 'PromiseKit', '~> 3.2'
   pod 'RealmSwift', '~> 1.0'
-  pod 'Material'
 
   target 'CycleTests' do
     inherit! :search_paths

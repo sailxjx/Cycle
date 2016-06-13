@@ -45,9 +45,12 @@
                                             <constraint firstAttribute="height" constant="180" id="yJl-0w-TZu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                        <state key="normal" title="42">
+                                        <state key="normal" title="0">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="checkinNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5WA-cg-Lwi"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Do something" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-BE-wHt" userLabel="Behavior Title">
                                         <rect key="frame" x="180" y="90" width="240" height="70"/>
@@ -101,6 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="checkinButton" destination="edr-Y5-wFw" id="Yjn-ZF-GhY"/>
+                        <outlet property="editHabitButton" destination="ZSY-42-KX1" id="iec-bU-bRQ"/>
                         <outlet property="habitNameTextView" destination="RIH-BE-wHt" id="g9s-QZ-yf9"/>
                     </connections>
                 </viewController>
@@ -120,10 +124,10 @@
                             <tableViewSection headerTitle="Name" id="P0n-gg-3rl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5vh-gM-1hC">
-                                        <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5vh-gM-1hC" id="h0Z-I8-6PD">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Habit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NDq-eO-Ew1">

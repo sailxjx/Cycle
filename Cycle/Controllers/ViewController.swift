@@ -13,12 +13,23 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var checkinButton: UIButton!
   @IBOutlet weak var habitNameTextView: UITextView!
+  @IBOutlet weak var editHabitButton: UIButton!
 
   var habit: Habit?
+  var currentRecord: Record?
+  var recordCount: Int = 0 {
+    didSet {
+      checkinButton.setTitle("\(recordCount)", forState: .Normal)
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
     self.habit = try! Realm().objects(Habit).first
+    if let habit = self.habit {
+      self.currentRecord = Record.getCurrentRecord(habit)
+      self.recordCount = Record.getRecordCount(habit)
+    }
     refreshView()
   }
 
@@ -51,6 +62,28 @@ class ViewController: UIViewController {
   func refreshView() {
     if let habit = self.habit {
       habitNameTextView.text = habit.name
+      editHabitButton.setTitle("Edit", forState: .Normal)
+    } else {
+      editHabitButton.setTitle("Add", forState: .Normal)
+    }
+  }
+
+  @IBAction func checkinNow(sender: UIButton) {
+    let realm = try! Realm()
+    if let currentRecord = self.currentRecord {
+      try! realm.write {
+        realm.delete(currentRecord)
+        self.currentRecord = nil
+      }
+      self.recordCount -= 1
+    } else {
+      try! realm.write {
+        let currentRecord = Record()
+        currentRecord.habit = self.habit
+        realm.add(currentRecord)
+        self.currentRecord = currentRecord
+      }
+      self.recordCount += 1
     }
   }
 
