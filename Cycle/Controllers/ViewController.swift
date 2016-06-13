@@ -25,7 +25,8 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.habit = try! Realm().objects(Habit).first
+    let realm = try! Realm()
+    self.habit = realm.objects(Habit).first
     if let habit = self.habit {
       self.currentRecord = Record.getCurrentRecord(habit)
       self.recordCount = Record.getRecordCount(habit)
