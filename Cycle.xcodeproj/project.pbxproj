@@ -12,7 +12,6 @@
 		6A16C0261D07FDFC009F296D /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A16C0251D07FDFC009F296D /* Record.swift */; };
 		6A27563F1D00286100CAC07C /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27563E1D00286100CAC07C /* ClockView.swift */; };
 		6A2756411D00291C00CAC07C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2756401D00291C00CAC07C /* ViewController.swift */; };
-		6A2756431D00292B00CAC07C /* BGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2756421D00292B00CAC07C /* BGView.swift */; };
 		6AC308951CDB2A020082A60C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC308941CDB2A020082A60C /* AppDelegate.swift */; };
 		6AC3089A1CDB2A020082A60C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC308981CDB2A020082A60C /* Main.storyboard */; };
 		6AC3089D1CDB2A020082A60C /* Cycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3089B1CDB2A020082A60C /* Cycle.xcdatamodeld */; };
@@ -41,7 +40,6 @@
 		6A16C0251D07FDFC009F296D /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = Models/Record.swift; sourceTree = "<group>"; };
 		6A27563E1D00286100CAC07C /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockView.swift; path = Views/ClockView.swift; sourceTree = "<group>"; };
 		6A2756401D00291C00CAC07C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
-		6A2756421D00292B00CAC07C /* BGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BGView.swift; path = Views/BGView.swift; sourceTree = "<group>"; };
 		6AC308911CDB2A020082A60C /* Cycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC308941CDB2A020082A60C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AC308991CDB2A020082A60C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 		6A27563B1D0027E700CAC07C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6A2756421D00292B00CAC07C /* BGView.swift */,
 				6A27563E1D00286100CAC07C /* ClockView.swift */,
 			);
 			name = Views;
@@ -388,7 +385,6 @@
 				6AC3089D1CDB2A020082A60C /* Cycle.xcdatamodeld in Sources */,
 				6A16C0241D07FC68009F296D /* Habit.swift in Sources */,
 				6A2756411D00291C00CAC07C /* ViewController.swift in Sources */,
-				6A2756431D00292B00CAC07C /* BGView.swift in Sources */,
 				6A16C0261D07FDFC009F296D /* Record.swift in Sources */,
 				6AC308951CDB2A020082A60C /* AppDelegate.swift in Sources */,
 			);

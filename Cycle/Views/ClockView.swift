@@ -8,11 +8,13 @@
 
 import UIKit
 
+@IBDesignable
 class ClockView: UIView {
 
   @IBInspectable var borderColor: UIColor = UIColor.orangeColor()
   @IBInspectable var shadowColor: UIColor = UIColor.whiteColor()
   @IBInspectable var borderWidth: CGFloat = 30
+  @IBInspectable var radius: CGFloat = 90
 
   override func drawRect(rect: CGRect) {
     drawShadow()
@@ -20,10 +22,10 @@ class ClockView: UIView {
   }
 
   func drawShadow() {
-    let surface = CGRect(x: borderWidth / 2,
-                         y: borderWidth / 2,
-                         width: bounds.width - borderWidth,
-                         height: bounds.height - borderWidth)
+    let surface = CGRect(x: bounds.width / 2 - radius,
+                         y: bounds.height / 2 - radius,
+                         width: radius * 2,
+                         height: radius * 2)
 
     let surfacePath = UIBezierPath(ovalInRect: surface)
     // Draw border
@@ -38,37 +40,18 @@ class ClockView: UIView {
 
     let startAngle = 0 - CGFloat(M_PI) / 2
     let endAngle = CGFloat(M_PI) / 4 * 5 - CGFloat(M_PI) / 2
-    let radius = bounds.width / 2 - borderWidth / 2
-
-    let startPoint = CGPoint(x: arcCenter.x +  radius * cos(startAngle),
-                             y: arcCenter.y + radius * sin(startAngle))
-    let endPoint = CGPoint(x: arcCenter.x +  radius * cos(endAngle),
-                           y: arcCenter.y + radius * sin(endAngle))
 
     let progressPath = UIBezierPath(arcCenter: arcCenter,
-                                    radius: bounds.width / 2,
+                                    radius: radius,
                                     startAngle: startAngle,
                                     endAngle: endAngle,
                                     clockwise: true)
-    progressPath.addArcWithCenter(endPoint,
-                                  radius: borderWidth / 2,
-                                  startAngle: endAngle,
-                                  endAngle: endAngle + CGFloat(M_PI),
-                                  clockwise: true)
-    progressPath.addArcWithCenter(arcCenter,
-                                  radius: bounds.width / 2 - borderWidth,
-                                  startAngle: endAngle,
-                                  endAngle: startAngle,
-                                  clockwise: false)
-    progressPath.addArcWithCenter(startPoint,
-                                  radius: borderWidth / 2,
-                                  startAngle: startAngle,
-                                  endAngle: startAngle + CGFloat(M_PI),
-                                  clockwise: false)
+
+    progressPath.lineWidth = borderWidth
 
     // Draw border
-    borderColor.setFill()
-    progressPath.fill()
+    borderColor.setStroke()
+    progressPath.stroke()
   }
 
 }

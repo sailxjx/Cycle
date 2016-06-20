@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,29 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pou-zG-0bh" userLabel="BG" customClass="BGView" customModule="Cycle" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Do something" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-BE-wHt" userLabel="Behavior Title">
+                                <rect key="frame" x="180" y="80" width="240" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9OH-SX-UsH"/>
+                                    <constraint firstAttribute="height" constant="33" id="oKL-g1-Gi7"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdf-ZK-Brg" customClass="ClockView" customModule="Cycle" customModuleProvider="target">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
                                 <subviews>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdf-ZK-Brg" customClass="ClockView" customModule="Cycle" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="180" width="240" height="240"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="QU2-7e-FZU"/>
-                                            <constraint firstAttribute="height" constant="240" id="y2g-IS-DBe"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                     <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edr-Y5-wFw">
-                                        <rect key="frame" x="210" y="210" width="180" height="180"/>
+                                        <rect key="frame" x="30" y="30" width="180" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="EZA-C1-2FU"/>
                                             <constraint firstAttribute="height" constant="180" id="yJl-0w-TZu"/>
@@ -52,53 +44,48 @@
                                             <action selector="checkinNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5WA-cg-Lwi"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Do something" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-BE-wHt" userLabel="Behavior Title">
-                                        <rect key="frame" x="180" y="90" width="240" height="70"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSY-42-KX1">
-                                        <rect key="frame" x="285" y="465" width="30" height="30"/>
-                                        <state key="normal" title="Add"/>
-                                        <connections>
-                                            <segue destination="220-Wc-7HD" kind="show" identifier="AddNewHabit" id="XMe-8i-YfC"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.82352941176470584" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="ZSY-42-KX1" firstAttribute="centerX" secondItem="pou-zG-0bh" secondAttribute="centerX" id="7qb-TI-uwZ"/>
-                                    <constraint firstItem="RIH-BE-wHt" firstAttribute="centerX" secondItem="pou-zG-0bh" secondAttribute="centerX" id="W2a-b6-Q6p"/>
-                                    <constraint firstItem="Xdf-ZK-Brg" firstAttribute="top" secondItem="RIH-BE-wHt" secondAttribute="bottom" constant="20" id="apl-YQ-Klg"/>
-                                    <constraint firstItem="RIH-BE-wHt" firstAttribute="width" secondItem="Xdf-ZK-Brg" secondAttribute="width" id="cDz-SW-THd"/>
-                                    <constraint firstItem="Xdf-ZK-Brg" firstAttribute="centerY" secondItem="pou-zG-0bh" secondAttribute="centerY" id="hxi-i5-WUa"/>
-                                    <constraint firstItem="edr-Y5-wFw" firstAttribute="centerX" secondItem="Xdf-ZK-Brg" secondAttribute="centerX" id="jui-3z-aHw"/>
-                                    <constraint firstItem="ZSY-42-KX1" firstAttribute="top" secondItem="Xdf-ZK-Brg" secondAttribute="bottom" constant="45" id="lH7-4r-JyJ"/>
-                                    <constraint firstItem="Xdf-ZK-Brg" firstAttribute="centerX" secondItem="pou-zG-0bh" secondAttribute="centerX" id="tax-Bg-NWQ"/>
-                                    <constraint firstItem="edr-Y5-wFw" firstAttribute="centerY" secondItem="Xdf-ZK-Brg" secondAttribute="centerY" id="zG1-8m-0ha"/>
-                                    <constraint firstItem="RIH-BE-wHt" firstAttribute="top" secondItem="pou-zG-0bh" secondAttribute="top" constant="90" id="zg0-am-U2N"/>
+                                    <constraint firstAttribute="width" constant="240" id="QU2-7e-FZU"/>
+                                    <constraint firstItem="edr-Y5-wFw" firstAttribute="centerX" secondItem="Xdf-ZK-Brg" secondAttribute="centerX" id="g5S-sP-8kA"/>
+                                    <constraint firstItem="edr-Y5-wFw" firstAttribute="centerY" secondItem="Xdf-ZK-Brg" secondAttribute="centerY" id="iPQ-0b-rhL"/>
+                                    <constraint firstAttribute="height" constant="240" id="y2g-IS-DBe"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" red="0.70588235294117641" green="0.92549019607843142" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" red="0.25882352941176467" green="0.57647058823529407" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSY-42-KX1">
+                                <rect key="frame" x="285" y="440" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <segue destination="220-Wc-7HD" kind="show" identifier="AddNewHabit" id="XMe-8i-YfC"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.59607843137254901" green="0.83921568627450982" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pou-zG-0bh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4Dr-nc-WfF"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pou-zG-0bh" secondAttribute="bottom" id="BDP-Q0-JmG"/>
-                            <constraint firstItem="pou-zG-0bh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Nce-tw-HiJ"/>
-                            <constraint firstAttribute="trailing" secondItem="pou-zG-0bh" secondAttribute="trailing" id="rl2-yY-Y69"/>
-                            <constraint firstItem="pou-zG-0bh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xAF-LW-YwG"/>
+                            <constraint firstItem="RIH-BE-wHt" firstAttribute="bottom" secondItem="Xdf-ZK-Brg" secondAttribute="bottom" constant="20" id="Ch4-Je-9uS"/>
+                            <constraint firstItem="RIH-BE-wHt" firstAttribute="top" secondItem="Xdf-ZK-Brg" secondAttribute="top" constant="-100" id="HZF-Jj-aO6"/>
+                            <constraint firstItem="Xdf-ZK-Brg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dtD-aE-SU4"/>
+                            <constraint firstItem="Xdf-ZK-Brg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dyY-KW-1hI"/>
+                            <constraint firstItem="ZSY-42-KX1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gld-Vx-WPs"/>
+                            <constraint firstItem="ZSY-42-KX1" firstAttribute="bottom" secondItem="Xdf-ZK-Brg" secondAttribute="bottom" constant="50" id="hkb-8o-4iZ"/>
+                            <constraint firstItem="ZSY-42-KX1" firstAttribute="top" secondItem="Xdf-ZK-Brg" secondAttribute="top" constant="50" id="ipj-xF-K3B"/>
+                            <constraint firstItem="RIH-BE-wHt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xjI-fr-6Ua"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Nce-tw-HiJ"/>
+                                <exclude reference="Ch4-Je-9uS"/>
+                                <exclude reference="ipj-xF-K3B"/>
                             </mask>
                         </variation>
                     </view>
